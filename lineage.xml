@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+     <remote  name="lineage"
+           fetch="https://github.com/LineageOS" />
+
+     <project path="external/ntfs-3g" name="android_external_ntfs-3g" remote="lineage" revision="lineage-16.0"/>
+     <project path="external/exfat" name="android_external_exfat" remote="lineage" revision="lineage-16.0" />
+</manifest>

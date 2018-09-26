@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+     <remote  name="TeamWin"
+           fetch="https://github.com/TeamWin" />
 
 <!-- TWRP lives in omnirom, not AOSP -->
     <remove-project name="platform/bootable/recovery" />
@@ -43,7 +45,7 @@
      So for those that do want to sync frameworks/base but don't want the build to break (eg framworks/support),
      sync it to the staging are and only link the needed directories.
 -->
-    <project path="TeamWin/.repo/frameworks/base" name="android_frameworks_base" remote="omnirom" revision="android-8.1" clone-depth="1" >
+    <project path="TeamWin/.repo/frameworks/base" name="android_frameworks_base" remote="omnirom" revision="android-9.0" clone-depth="1" >
         <linkfile src="core/java/android/content" dest="frameworks/base/core/java/android/content" />
         <linkfile src="core/java/android/security" dest="frameworks/base/core/java/android/security" />
     </project> />
@@ -53,6 +55,6 @@
     <!-- <project path="external/busybox" name="TeamWin/android_external_busybox" remote="github" revision="android-8.0" /> -->
 
 <!-- Use OmniROM busybox -->
-    <project path="external/busybox" name="android_external_busybox" remote="omnirom" revision="android-8.1" />
+    <project path="external/busybox" name="android_external_busybox" remote="TeamWin" revision="android-9.0" />
 
 </manifest>
